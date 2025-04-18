@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="calculator.css"> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrapper">
+    
+        <input
+        type="text"
+        placeholder="please enter a First number"
+        id="frstinput" required
+      />
+      <input
+        type="text"
+        placeholder="please enter a Second  number"
+        id="secondinput"  required
+      />
+
+      <select>
+        <option value="Opreators" selected disabled>Opreators</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+      
+      <p></p>
+      
+       
+    </div>
+   
+    
+    <script>
+      let firstinput =document.querySelector("#frstinput");
+      let secondtinput = document.querySelector("#secondinput");
+
+      let options = document.querySelector("select");
+      let btn = document.querySelector("#btn");
+      let para=document.querySelector("p")
+      
+      
+   
+       options.addEventListener('click',()=>{
+        switch (options.value) {
+          case "+":
+            {
+              para.innerHTML=Number(firstinput.value) + Number(secondinput.value);
+              
+            }
+            break;
+          case "-":
+            {
+                para.innerHTML=firstinput.value - secondinput.value;
+            }
+            break;
+          case "*":
+            {
+                para.innerHTML=firstinput.value * secondinput.value;
+            }
+            break;
+          case "/":
+            {
+                para.innerHTML=firstinput.value / secondinput.value;
+            }
+            break;
+          case "%":
+            {
+                para.innerHTML=firstinput.value % secondinput.value;
+            }
+            break;
+          
+            }
+       })
+       
+      
+       
+    
+    </script>
+  </body>
+</html>
+
